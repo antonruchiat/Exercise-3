@@ -1,0 +1,174 @@
+<! DOCTYPE html>
+<html lang="en">
+ <head>
+   <title> FILTER IN JAVASCRIPT </title>
+   <link type="text/css" rel="stylesheet" href="style.css"/>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ </head>
+
+ <body>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+
+   <div class="container-fluid">
+               <div class="table-responsive-lg">
+                  <input class="input-group input-group-sm mb-3 col-sm-6" type="text" id="nameInput" onkeyup="myFunction()" placeholder="Search names.." title="Type in a name">
+                 <table class="table table-hover table-bordered" id="Tablex">
+                   <thead>
+                     <tr>
+                       <th scope="col" class="table-info"> Name </th>
+                       <th scope="col" class="table-info"> Rotation </th>
+                       <th scope="col" class="table-info"> Orbital </th>
+                       <th scope="col" class="table-info"> Diameter </th>
+                       <th scope="col" class="table-info"> Climate </th>
+                       <th scope="col" class="table-info"> Gravity </th>
+                       <th scope="col" class="table-info"> Terrain </th>
+                       <th scope="col" class="table-info"> Surface </th>
+                       <th scope="col" class="table-info"> Population </th>
+                       <th scope="col" class="table-info"> Residents </th>
+                       <th scope="col" class="table-info"> Films </th>
+                       <th scope="col" class="table-info"> Created </th>
+                       <th scope="col" class="table-info"> Edited </th>
+                       <th scope="col" class="table-info"> Url </th>
+                     </tr>
+                   </thead>
+
+                   <tbody>
+                     <tr>
+                       <td><b> Alderaan </b></td>
+                       <td> 24 </td>
+                       <td> 364 </td>
+                       <td> 12500 </td>
+                       <td> temperate </td>
+                       <td> 1 standard </td>
+                       <td> grasslands, mountains  </td>
+                       <td> 40 </td>
+                       <td> 2000000000 </td>
+                       <td> https://swapi.co/api/people/5/,<br/>
+                            https://swapi.co/api/people/68/,<br/>
+                            https://swapi.co/api/people/81/ </td>
+                       <td> https://swapi.co/api/films/6/,<br/>
+                            https://swapi.co/api/films/1/ </td>
+                       <td> 2014-12-10T11:35:48.479000Z </td>
+                       <td> 2014-12-20T20:58:18.420000Z </td>
+                       <td> https://swapi.co/api/planets/2/ </td>
+                     </tr>
+
+                     <tr>
+                       <td><b> Yavin IV </b></td>
+                       <td> 24 </td>
+                       <td> 4818 </td>
+                       <td> 10200 </td>
+                       <td> temperate, tropical </td>
+                       <td> 1 standard </td>
+                       <td> jungle, rainforests </td>
+                       <td> 8 </td>
+                       <td> 1000 </td>
+                       <td> [] </td>
+                       <td> https://swapi.co/api/films/1/ </td>
+                       <td> 2014-12-10T11:37:19.144000Z </td>
+                       <td> 2014-12-20T20:58:18.421000Z </td>
+                       <td> https://swapi.co/api/planets/3/ </td>
+                     </tr>
+
+                     <tr>
+                       <td><b> Hoth </b></td>
+                       <td> 23 </td>
+                       <td> 549 </td>
+                       <td> 7200 </td>
+                       <td> frozen </td>
+                       <td> 1.1 standard </td>
+                       <td> tundra, ice caves, mountain ranges </td>
+                       <td> 100 </td>
+                       <td> unknown </td>
+                       <td> [] </td>
+                       <td> https://swapi.co/api/films/2/ </td>
+                       <td> 2014-12-10T11:39:13.934000Z </td>
+                       <td> 2014-12-20T20:58:18.423000Z </td>
+                       <td> https://swapi.co/api/planets/4/ </td>
+                     </tr>
+
+                     <tr>
+                       <td><b> Dagobah </b></td>
+                       <td> 23 </td>
+                       <td> 341 </td>
+                       <td> 8900 </td>
+                       <td> murky </td>
+                       <td> N/A </td>
+                       <td> swamp, jungles </td>
+                       <td> 8 </td>
+                       <td> unknown </td>
+                       <td> [] </td>
+                       <td> https://swapi.co/api/films/2/,<br/>
+                            https://swapi.co/api/films/6/, <br/>
+                            https://swapi.co/api/films/3/ </td>
+                       <td> 2014-12-10T11:42:22.590000Z </td>
+                       <td> 2014-12-20T20:58:18.425000Z </td>
+                       <td> https://swapi.co/api/planets/5/ </td>
+                     </tr>
+
+                     <tr>
+                       <td><b> Bespin </b></td>
+                       <td> 12 </td>
+                       <td> 5110 </td>
+                       <td> 118000 </td>
+                       <td> temperate </td>
+                       <td> 1.5 (surface), 1 standard (Cloud City) </td>
+                       <td> gas giant </td>
+                       <td> 0 </td>
+                       <td> 6000000 </td>
+                       <td> https://swapi.co/api/people/26/ </td>
+                       <td> https://swapi.co/api/films/2/ </td>
+                       <td> 2014-12-10T11:43:55.240000Z </td>
+                       <td> 2014-12-20T20:58:18.427000Z </td>
+                       <td> https://swapi.co/api/planets/6/ </td>
+                     </tr>
+
+                     <tr>
+                       <td><b> Endor </b></td>
+                       <td> 18 </td>
+                       <td> 402 </td>
+                       <td> 4900 </td>
+                       <td> temperate </td>
+                       <td> 0.85 standard </td>
+                       <td> forests, mountains, lakes </td>
+                       <td> 8 </td>
+                       <td> 30000000 </td>
+                       <td> https://swapi.co/api/people/30/ </td>
+                       <td> https://swapi.co/api/films/3/ </td>
+                       <td> 2014-12-10T11:50:29.349000Z </td>
+                       <td> 2014-12-20T20:58:18.429000Z </td>
+                       <td> https://swapi.co/api/planets/7/ </td>
+                     </tr>
+                   </tbody>
+                </table>
+              </div>
+  </div>
+
+
+  <script>
+      function myFunction() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("nameInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("Tablex");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+</script>
+ </body>
+</html>
